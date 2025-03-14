@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: i-boot3
+
+  profiles:
+    include:
+      - dubbo

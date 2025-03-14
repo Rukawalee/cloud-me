@@ -1,0 +1,16 @@
+dubbo:
+  registry:
+    # 填写正确的 ip 地址
+    address: nacos://${nacos.address:127.0.0.1}:8848
+    # all: 注入接口和实例
+    register-mode: all
+    parameters:
+      # 填写 namespace 后在 nacas 对应命名空间就能发现服务了
+      namespace: a48b59f4-064f-4a7a-bdd5-999ad01382c8
+      register-consumer-url: true
+  protocol:
+    name: tri
+    port: 50051
+  application:
+    name: i-boot3-api
+    logger: slf4j
