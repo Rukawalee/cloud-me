@@ -6,7 +6,6 @@
         <groupId>com.boot.i</groupId>
         <artifactId>i-boot3</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.boot.i</groupId>
     <artifactId>i-boot3-api</artifactId>
@@ -28,10 +27,6 @@
     </scm>
 
     <dependencies>
-        <dependency>
-            <groupId>com.boot.i</groupId>
-            <artifactId>i-boot3-domain</artifactId>
-        </dependency>
     </dependencies>
 
     <build>

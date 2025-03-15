@@ -1,0 +1,3 @@
+spring:
+  application:
+    name: i-boot3-manager

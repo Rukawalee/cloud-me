@@ -6,7 +6,6 @@
         <groupId>com.boot.i</groupId>
         <artifactId>i-boot3</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.boot.i</groupId>
     <artifactId>i-boot3-domain</artifactId>
@@ -37,6 +36,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.boot.i</groupId>
+            <artifactId>i-boot3-infrastructure</artifactId>
         </dependency>
     </dependencies>
 
