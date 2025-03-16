@@ -6,3 +6,5 @@ spring:
     include:
       - dubbo
       - redis
+      - datasource
+      - mybatis

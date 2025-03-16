@@ -36,6 +36,9 @@
 		<i-boot3-manager.version>0.0.1-SNAPSHOT</i-boot3-manager.version>
 		<i-boot3-infrastructure.version>0.0.1-SNAPSHOT</i-boot3-infrastructure.version>
 		<i-boot3-facade.version>0.0.1-SNAPSHOT</i-boot3-facade.version>
+		<mysql.version>9.2.0</mysql.version>
+		<mybatis.version>3.0.4</mybatis.version>
+		<druid.version>1.2.24</druid.version>
 	</properties>
 
 	<modules>
@@ -88,6 +91,24 @@
 				<groupId>com.boot.i</groupId>
 				<artifactId>i-boot3-facade</artifactId>
 				<version>${i-boot3-facade.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.mysql</groupId>
+				<artifactId>mysql-connector-j</artifactId>
+				<version>${mysql.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.mybatis.spring.boot</groupId>
+				<artifactId>mybatis-spring-boot-starter</artifactId>
+				<version>${mybatis.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.alibaba</groupId>
+				<artifactId>druid-spring-boot-starter</artifactId>
+				<version>${druid.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>

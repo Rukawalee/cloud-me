@@ -61,6 +61,11 @@
             <groupId>com.boot.i</groupId>
             <artifactId>i-boot3-facade</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
     </dependencies>
 
     <build>

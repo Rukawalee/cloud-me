@@ -1,0 +1,33 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: i-boot3
+    password: ${mysql.password:test}
+    url: jdbc:mysql://${mysql.address:127.0.0.1}:3306/i-boot3
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      initialSize: 5
+      minIdle: 5
+      maxActive: 20
+      maxWait: 600000
+      # 监控统计拦截的 filters：stat:监控统计
+      # self4j：日志记录
+      # wall：防御 sql 注入
+      filter:
+        slf4j:
+          enabled: true
+        stat:
+          enabled: true
+          merge-sql: true
+          slow-sql-millis: 5000
+        wall:
+          enabled: true
+      #配置stat-view-servlet
+      stat-view-servlet:
+        enabled: true
+        login-username: admin
+        login-password: 123456
+        reset-enable: false
+      #配置web-stat-filter
+      web-stat-filter:
+        enabled: true

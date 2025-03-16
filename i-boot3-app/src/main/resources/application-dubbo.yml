@@ -6,7 +6,7 @@ dubbo:
     register-mode: all
     parameters:
       # 填写 namespace 后在 nacas 对应命名空间就能发现服务了
-#      namespace: a48b59f4-064f-4a7a-bdd5-999ad01382c8
+      namespace: ${nacos.namespace:test}
       register-consumer-url: true
   protocol:
     name: tri
