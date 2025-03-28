@@ -1,12 +1,14 @@
 dubbo:
   registry:
     # 填写正确的 ip 地址
-    address: nacos://${nacos.address:127.0.0.1}:8848
+    address: nacos://${nacos.address:192.168.145.133}:8848
     # all: 注入接口和实例
     register-mode: all
     parameters:
       # 填写 namespace 后在 nacas 对应命名空间就能发现服务了
-      namespace: ${nacos.namespace:test}
+      namespace: ${nacos.namespace:public}
+      username: ${nacos.username:nacos}
+      password: ${nacos.password:i-boot3}
       register-consumer-url: true
   protocol:
     name: tri

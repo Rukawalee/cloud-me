@@ -2,8 +2,8 @@ spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: i-boot3
-    password: ${mysql.password:test}
-    url: jdbc:mysql://${mysql.address:127.0.0.1}:3306/i-boot3
+    password: ${mysql.password:4Wk7NBZiiaESmXRB}
+    url: jdbc:mysql://${mysql.address:192.168.145.133}:3306/i-boot3
     type: com.alibaba.druid.pool.DruidDataSource
     druid:
       initialSize: 5
