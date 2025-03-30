@@ -29,7 +29,6 @@
 	</scm>
 	<properties>
 		<java.version>17</java.version>
-		<spring-cloud.version>4.2.1</spring-cloud.version>
 		<dubbo.version>3.3.4</dubbo.version>
 		<nacos.version>2023.0.3.2</nacos.version>
 		<i-boot3.version>0.0.1-SNAPSHOT</i-boot3.version>
@@ -63,12 +62,6 @@
 				<groupId>org.apache.dubbo</groupId>
 				<artifactId>dubbo-nacos-spring-boot-starter</artifactId>
 				<version>${dubbo.version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>org.springframework.cloud</groupId>
-				<artifactId>spring-cloud-starter-bootstrap</artifactId>
-				<version>${spring-cloud.version}</version>
 			</dependency>
 
 			<dependency>
