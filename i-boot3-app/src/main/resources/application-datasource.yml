@@ -1,9 +1,9 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    username: ${mysql.username:i-boot3}
-    password: ${mysql.password:4Wk7NBZiiaESmXRB}
-    url: jdbc:mysql://${mysql.address:192.168.145.133:3306/i-boot3}
+    username: ${mysql.username}
+    password: ${mysql.password}
+    url: ${mysql.address}
     type: com.alibaba.druid.pool.DruidDataSource
     druid:
       initialSize: 5
@@ -25,8 +25,8 @@ spring:
       #配置stat-view-servlet
       stat-view-servlet:
         enabled: true
-        login-username: admin
-        login-password: 123456
+        login-username: ${stat.username}
+        login-password: ${stat.password}
         reset-enable: false
       #配置web-stat-filter
       web-stat-filter:

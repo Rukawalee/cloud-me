@@ -9,7 +9,7 @@ nacos:
 
 spring:
   config:
-    import: optional:nacos:iboot-3.appplication.yml
+    import: optional:nacos:${spring.application.name}.appplication.yml
   cloud:
     nacos:
       username: ${nacos.username}

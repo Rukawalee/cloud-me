@@ -1,7 +1,7 @@
 dubbo:
   registry:
     # 填写正确的 ip 地址
-    address: nacos://${nacos.address}
+    address: ${dubbo.address}
     # all: 注入接口和实例
     register-mode: all
     parameters:
