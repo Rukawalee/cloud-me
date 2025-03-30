@@ -1,0 +1,11 @@
+spring:
+  cloud:
+    nacos:
+      username: nacos
+      password: i-boot3
+      server-addr: ${nacos.address:192.168.145.133}:8848
+      config:
+        namespace: public
+        import-check:
+          enabled: false
+

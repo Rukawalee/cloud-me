@@ -5,6 +5,11 @@ spring:
   profiles:
     include:
       - dubbo
+      - nacos
       - redis
       - datasource
       - mybatis
+
+  cloud:
+    compatibility-verifier:
+      enabled: false
