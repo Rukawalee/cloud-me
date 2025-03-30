@@ -1,6 +1,6 @@
 spring:
   data:
     redis:
-      host: 192.168.145.133
+      host: ${redis.host:192.168.145.133}
       port: 6379
       password: ${redis.password:test}

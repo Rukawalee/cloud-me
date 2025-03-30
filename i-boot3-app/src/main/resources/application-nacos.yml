@@ -1,12 +1,21 @@
+nacos:
+  address: 192.168.145.133:8848
+  username: nacos
+  password: nacos
+  config:
+    namespace: public
+  discovery:
+    namespace: public
+
 spring:
   config:
     import: optional:nacos:iboot-3.appplication.yml
   cloud:
     nacos:
-      username: nacos
-      password: nacos
-      server-addr: ${nacos.address:192.168.145.133}:8848
+      username: ${nacos.username}
+      password: ${nacos.password}
+      server-addr: ${nacos.address}
       config:
-        namespace: public
+        namespace: ${nacos.config.namespace}
       discovery:
-        namespace: public
+        namespace: ${nacos.discovery.namespace}

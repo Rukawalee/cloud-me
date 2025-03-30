@@ -4,8 +4,8 @@ spring:
 
   profiles:
     include:
-      - dubbo
       - nacos
+      - dubbo
       - redis
       - datasource
       - mybatis
