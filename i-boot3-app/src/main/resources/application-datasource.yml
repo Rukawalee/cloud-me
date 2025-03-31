@@ -4,30 +4,10 @@ spring:
     username: ${mysql.username}
     password: ${mysql.password}
     url: ${mysql.address}
-    type: com.alibaba.druid.pool.DruidDataSource
-    druid:
-      initialSize: 5
-      minIdle: 5
-      maxActive: 20
-      maxWait: 600000
-      # 监控统计拦截的 filters：stat:监控统计
-      # self4j：日志记录
-      # wall：防御 sql 注入
-      filter:
-        slf4j:
-          enabled: true
-        stat:
-          enabled: true
-          merge-sql: true
-          slow-sql-millis: 5000
-        wall:
-          enabled: true
-      #配置stat-view-servlet
-      stat-view-servlet:
-        enabled: true
-        login-username: ${stat.username}
-        login-password: ${stat.password}
-        reset-enable: false
-      #配置web-stat-filter
-      web-stat-filter:
-        enabled: true
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      connection-timeout: 20000
+      minimum-idle: 5
+      maximum-pool-size: 20
+      idle-timeout: 300000
+      max-lifetime: 1200000
