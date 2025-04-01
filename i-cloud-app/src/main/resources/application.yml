@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: i-cloud
+
+  profiles:
+    include:
+      - nacos
+      - dubbo
+      - redis
+      - datasource
+      - mybatis
+
+# 解决 cloud 版本兼容问题
+  cloud:
+    compatibility-verifier:
+      enabled: false
