@@ -3,7 +3,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: ${mysql.username}
     password: ${mysql.password}
-    url: ${mysql.address}
+    url: ${mysql.url}
     type: com.zaxxer.hikari.HikariDataSource
     hikari:
       connection-timeout: 20000

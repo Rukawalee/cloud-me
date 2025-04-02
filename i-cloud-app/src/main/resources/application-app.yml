@@ -1,0 +1,25 @@
+# nacos config
+nacos:
+  address: 192.168.145.135:8848
+  username: nacos
+  password: nacos
+  config:
+    namespace: public
+  discovery:
+    namespace: public
+
+# mysql config
+mysql:
+  username: i-cloud
+  password: i-cloud
+  url: jdbc:mysql://192.168.145.135:3306/i-cloud
+
+# dubbo config
+dubbo:
+  address: nacos://192.168.145.135:8848
+
+# redis config
+redis:
+  host: 192.168.145.135
+  port: 6379
+  password: redis_i2k5jD

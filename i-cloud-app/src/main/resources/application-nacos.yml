@@ -1,15 +1,6 @@
-nacos:
-  address: 192.168.145.133:8848
-  username: nacos
-  password: nacos
-  config:
-    namespace: public
-  discovery:
-    namespace: public
-
 spring:
   config:
-    import: optional:nacos:${spring.application.name}.appplication.yml
+    import: optional:nacos:application-${spring.application.name}.yml
   cloud:
     nacos:
       username: ${nacos.username}
