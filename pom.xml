@@ -40,6 +40,7 @@
 		<mysql.version>9.2.0</mysql.version>
 		<mybatis.version>3.0.4</mybatis.version>
 		<druid.version>1.2.24</druid.version>
+		<powerjob.version>5.1.1</powerjob.version>
 	</properties>
 
 	<modules>
@@ -118,6 +119,13 @@
 				<groupId>com.alibaba</groupId>
 				<artifactId>druid-spring-boot-starter</artifactId>
 				<version>${druid.version}</version>
+			</dependency>
+
+			<!-- http://www.powerjob.tech/ -->
+			<dependency>
+				<groupId>tech.powerjob</groupId>
+				<artifactId>powerjob-worker-spring-boot-starter</artifactId>
+				<version>${powerjob.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
