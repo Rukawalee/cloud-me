@@ -12,6 +12,7 @@ spring:
       - mybatis
       - powerjob
       - seata
+      - rocketmq
 
 # 解决 cloud 版本兼容问题
   cloud:

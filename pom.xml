@@ -41,6 +41,7 @@
 		<mybatis.version>3.0.4</mybatis.version>
 		<druid.version>1.2.24</druid.version>
 		<powerjob.version>5.1.1</powerjob.version>
+		<rocketmq.version>2.3.3</rocketmq.version>
 	</properties>
 
 	<modules>
@@ -125,6 +126,12 @@
 				<groupId>tech.powerjob</groupId>
 				<artifactId>powerjob-worker-spring-boot-starter</artifactId>
 				<version>${powerjob.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.rocketmq</groupId>
+				<artifactId>rocketmq-spring-boot-starter</artifactId>
+				<version>${rocketmq.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>

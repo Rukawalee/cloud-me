@@ -1,0 +1,6 @@
+rocketmq:
+  name-server: ${rocketmq.address}
+  producer:
+    group: ${spring.application.name}-producer
+  consumer:
+    group: ${spring.application.name}-consumer

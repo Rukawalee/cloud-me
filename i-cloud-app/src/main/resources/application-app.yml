@@ -31,3 +31,7 @@ powerjob:
 # seata
 seata:
   address: 192.168.145.135:8091
+
+# rocketmq
+rocketmq:
+  address: 192.168.145.135:9876
