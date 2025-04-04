@@ -1,0 +1,22 @@
+# https://seata.apache.org/zh-cn/
+seata:
+  enabled: true
+  tx-service-group: default_tx_group
+  service:
+    vgroup-mapping:
+      default_tx_group: default
+#    grouplist:
+#      default: ${seata.address}
+  registry:
+    type: nacos
+    nacos:
+      server-addr: ${nacos.address}
+      namespace: ${nacos.discovery.namespace}
+      username: ${nacos.username}
+      password: ${nacos.password}
+      group: SEATA_GROUP
+  application-id: ${spring.application.name}
+
+client:
+  tm:
+    degradeCheck: true

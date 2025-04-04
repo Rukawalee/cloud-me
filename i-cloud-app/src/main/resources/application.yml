@@ -11,6 +11,7 @@ spring:
       - datasource
       - mybatis
       - powerjob
+      - seata
 
 # 解决 cloud 版本兼容问题
   cloud:

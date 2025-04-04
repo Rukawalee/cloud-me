@@ -1,7 +1,8 @@
+# http://www.powerjob.tech/
 powerjob:
   worker:
     app-name: ${spring.application.name}
-    server-address: 192.168.145.135:7700
+    server-address: ${powerjob.address}
     protocol: http
     store-strategy: disk
     max-result-length: 4096
