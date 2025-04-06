@@ -18,3 +18,7 @@ spring:
   cloud:
     compatibility-verifier:
       enabled: false
+
+logging:
+  file:
+    path: classpath:logback-spring.xml

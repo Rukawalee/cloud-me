@@ -42,6 +42,7 @@
 		<druid.version>1.2.24</druid.version>
 		<powerjob.version>5.1.1</powerjob.version>
 		<rocketmq.version>2.3.3</rocketmq.version>
+		<skywalking.version>9.4.0</skywalking.version>
 	</properties>
 
 	<modules>
@@ -132,6 +133,22 @@
 				<groupId>org.apache.rocketmq</groupId>
 				<artifactId>rocketmq-spring-boot-starter</artifactId>
 				<version>${rocketmq.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.skywalking</groupId>
+				<artifactId>apm-toolkit-logback-1.x</artifactId>
+				<version>${skywalking.version}</version>
+				<exclusions>
+					<exclusion>
+						<groupId>net.bytebuddy</groupId>
+						<artifactId>byte-buddy</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>ch.qos.logback</groupId>
+						<artifactId>logback-classic</artifactId>
+					</exclusion>
+				</exclusions>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
