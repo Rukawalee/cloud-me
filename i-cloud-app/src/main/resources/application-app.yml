@@ -35,3 +35,7 @@ seata:
 # rocketmq
 rocketmq:
   address: 192.168.145.135:9876
+
+# sentinel
+sentinel:
+  address: 192.168.145.135:8858

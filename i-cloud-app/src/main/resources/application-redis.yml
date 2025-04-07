@@ -1,3 +1,4 @@
+# https://redis.io/docs/latest/develop/clients/jedis/
 spring:
   data:
     redis:

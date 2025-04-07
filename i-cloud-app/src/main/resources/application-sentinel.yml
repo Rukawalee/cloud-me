@@ -1,0 +1,8 @@
+# https://sentinelguard.io/zh-cn/docs/introduction.html
+spring:
+  cloud:
+    sentinel:
+      eager: true
+      transport:
+        dashboard: ${sentinel.address}
+        port: 8719

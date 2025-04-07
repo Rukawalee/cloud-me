@@ -1,3 +1,4 @@
+# https://cn.dubbo.apache.org/zh-cn/overview/what/
 dubbo:
   registry:
     # 填写正确的 ip 地址

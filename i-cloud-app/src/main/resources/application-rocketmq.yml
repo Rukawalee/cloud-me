@@ -1,3 +1,4 @@
+# https://rocketmq.apache.org/docs/quickStart/01quickstart/
 rocketmq:
   name-server: ${rocketmq.address}
   producer:
