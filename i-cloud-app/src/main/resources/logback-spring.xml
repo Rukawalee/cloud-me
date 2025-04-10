@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<configuration>
-    <property name="logPath" value="logs" />
-    <property name="LOG_FILE" value="logs/app.log" />
+<configuration scan="true" scanPeriod=" 5 seconds">
+    <property name="logPath" value="logs"/>
+    <property name="LOG_FILE" value="logs/app.log"/>
 
     <conversionRule conversionWord="clr" converterClass="org.springframework.boot.logging.logback.ColorConverter"/>
     <conversionRule conversionWord="wex"
@@ -15,6 +15,9 @@
     <property name="FILE_LOG_PATTERN"
               value="${FILE_LOG_PATTERN:-%d{${LOG_DATEFORMAT_PATTERN:-yyyy-MM-dd HH:mm:ss.SSS}} ${LOG_LEVEL_PATTERN:-%5p} ${PID:- } --- [%t] %-40.40logger{39} : [%replace(%tid){'TID:',''}] %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}}"/>
     <property name="FILE_LOG_CHARSET" value="${FILE_LOG_CHARSET:-${file.encoding:-UTF-8}}"/>
+    <property name="SKYWALKING_LOG_PATTERN"
+              value="${FILE_LOG_PATTERN:-%d{${LOG_DATEFORMAT_PATTERN:-yyyy-MM-dd HH:mm:ss.SSS}} ${LOG_LEVEL_PATTERN:-%5p} ${PID:- } --- [%t] %-40.40logger{39} : [%replace(%X{tid}){'TID:',''}] %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}}"/>
+    <property name="SKYWALKING_LOG_CHARSET" value="${FILE_LOG_CHARSET:-${file.encoding:-UTF-8}}"/>
 
     <logger name="org.apache.catalina.startup.DigesterFactory" level="ERROR"/>
     <logger name="org.apache.catalina.util.LifecycleBase" level="ERROR"/>
@@ -24,8 +27,9 @@
     <logger name="org.eclipse.jetty.util.component.AbstractLifeCycle" level="ERROR"/>
     <logger name="org.hibernate.validator.internal.util.Version" level="WARN"/>
     <logger name="org.springframework.boot.actuate.endpoint.jmx" level="WARN"/>
+    <logger name="tech.powerjob.worker.background.WorkerHealthReporter" level="WARN"/>
 
-    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+    <appender name="CONSOLE-APPENDER" class="ch.qos.logback.core.ConsoleAppender">
         <encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">
             <layout class="org.apache.skywalking.apm.toolkit.log.logback.v1.x.TraceIdPatternLogbackLayout">
                 <pattern>${CONSOLE_LOG_PATTERN}</pattern>
@@ -34,7 +38,16 @@
         </encoder>
     </appender>
 
-    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <appender name="SKYWALKING-APPENDER" class="org.apache.skywalking.apm.toolkit.log.logback.v1.x.log.GRPCLogClientAppender">
+        <encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">
+            <layout class="org.apache.skywalking.apm.toolkit.log.logback.v1.x.TraceIdPatternLogbackLayout">
+                <pattern>${SKYWALKING_LOG_PATTERN}</pattern>
+                <charset>${SKYWALKING_LOG_CHARSET}</charset>
+            </layout>
+        </encoder>
+    </appender>
+
+    <appender name="FILE-APPENDER" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">
             <layout class="org.apache.skywalking.apm.toolkit.log.logback.v1.x.TraceIdPatternLogbackLayout">
                 <pattern>${FILE_LOG_PATTERN}</pattern>
@@ -53,7 +66,8 @@
     </appender>
 
     <root level="INFO">
-        <appender-ref ref="CONSOLE"/>
-        <appender-ref ref="FILE"/>
+        <appender-ref ref="CONSOLE-APPENDER"/>
+        <appender-ref ref="FILE-APPENDER"/>
+        <appender-ref ref="SKYWALKING-APPENDER"/>
     </root>
 </configuration>

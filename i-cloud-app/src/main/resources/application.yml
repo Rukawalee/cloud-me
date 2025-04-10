@@ -12,7 +12,9 @@ spring:
       - mybatis
       - powerjob
       - seata
-      - rocketmq
+      - kafka
+# replace rocketmq to kafka
+#      - rocketmq
       - sentinel
 
 # 解决 cloud 版本兼容问题
