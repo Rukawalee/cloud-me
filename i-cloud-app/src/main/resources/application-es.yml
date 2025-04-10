@@ -1,0 +1,6 @@
+# https://www.elastic.co/guide/en/elasticsearch/reference/current/getting-started.html
+spring:
+  elasticsearch:
+    uris: ${es.address}
+    username: ${es.username}
+    password: ${es.password}

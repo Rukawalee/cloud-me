@@ -43,3 +43,9 @@ sentinel:
 # kafka
 kafka:
   address: 192.168.145.135:9092
+
+# elasticsearch
+es:
+  address: http://192.168.145.135:9200
+  username: elastic
+  password: Elastic_NHDxN6
