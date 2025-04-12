@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: cloud-me
+
+  profiles:
+    include:
+      - app
+      - nacos
+      - dubbo
+      - redis
+      - datasource
+      - mybatis
+      - powerjob
+      - seata
+      - kafka
+# replace rocketmq to kafka
+#      - rocketmq
+      - sentinel
+      - es
+
+# 解决 cloud 版本兼容问题
+  cloud:
+    compatibility-verifier:
+      enabled: false
+
+logging:
+  file:
+    path: classpath:logback-spring.xml

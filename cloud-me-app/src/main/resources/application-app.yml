@@ -1,0 +1,52 @@
+# app 基础启动参数
+# nacos config
+nacos:
+  address: 192.168.145.135:8848
+  username: nacos
+  password: nacos
+  config:
+    namespace: public
+  discovery:
+    namespace: public
+
+# mysql config
+mysql:
+  username: cloud-me
+  password: cloud-me
+  url: jdbc:mysql://192.168.145.135:3306/cloud-me
+
+# dubbo config
+dubbo:
+  address: nacos://192.168.145.135:8848
+
+# redis config
+redis:
+  host: 192.168.145.135
+  port: 6379
+  password: redis_i2k5jD
+
+# powerjob
+powerjob:
+  address: 192.168.145.135:7700
+
+# seata
+seata:
+  address: 192.168.145.135:8091
+
+# rocketmq
+rocketmq:
+  address: 192.168.145.135:9876
+
+# sentinel
+sentinel:
+  address: 192.168.145.135:8858
+
+# kafka
+kafka:
+  address: 192.168.145.135:9092
+
+# elasticsearch
+es:
+  address: http://192.168.145.135:9200
+  username: elastic
+  password: Elastic_NHDxN6

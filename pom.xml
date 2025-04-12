@@ -8,11 +8,11 @@
 		<version>3.4.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.boot.i</groupId>
-	<artifactId>i-cloud</artifactId>
+	<groupId>com.cloud.me</groupId>
+	<artifactId>cloud-me</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>i-cloud</name>
-	<description>i-cloud</description>
+	<name>cloud-me</name>
+	<description>cloud-me</description>
 	<packaging>pom</packaging>
 	<url/>
 	<licenses>
@@ -31,12 +31,12 @@
 		<java.version>17</java.version>
 		<dubbo.version>3.3.4</dubbo.version>
 		<spring-cloud-alibaba.version>2023.0.3.2</spring-cloud-alibaba.version>
-		<i-cloud.version>0.0.1-SNAPSHOT</i-cloud.version>
-		<i-cloud-domain.version>0.0.1-SNAPSHOT</i-cloud-domain.version>
-		<i-cloud-api.version>0.0.1-SNAPSHOT</i-cloud-api.version>
-		<i-cloud-manager.version>0.0.1-SNAPSHOT</i-cloud-manager.version>
-		<i-cloud-infrastructure.version>0.0.1-SNAPSHOT</i-cloud-infrastructure.version>
-		<i-cloud-facade.version>0.0.1-SNAPSHOT</i-cloud-facade.version>
+		<cloud-me.version>0.0.1-SNAPSHOT</cloud-me.version>
+		<cloud-me-domain.version>0.0.1-SNAPSHOT</cloud-me-domain.version>
+		<cloud-me-api.version>0.0.1-SNAPSHOT</cloud-me-api.version>
+		<cloud-me-manager.version>0.0.1-SNAPSHOT</cloud-me-manager.version>
+		<cloud-me-infrastructure.version>0.0.1-SNAPSHOT</cloud-me-infrastructure.version>
+		<cloud-me-facade.version>0.0.1-SNAPSHOT</cloud-me-facade.version>
 		<mysql.version>9.2.0</mysql.version>
 		<mybatis.version>3.0.4</mybatis.version>
 		<druid.version>1.2.24</druid.version>
@@ -46,12 +46,12 @@
 	</properties>
 
 	<modules>
-		<module>i-cloud-infrastructure</module>
-		<module>i-cloud-domain</module>
-		<module>i-cloud-api</module>
-		<module>i-cloud-facade</module>
-		<module>i-cloud-manager</module>
-		<module>i-cloud-app</module>
+		<module>cloud-me-infrastructure</module>
+		<module>cloud-me-domain</module>
+		<module>cloud-me-api</module>
+		<module>cloud-me-facade</module>
+		<module>cloud-me-manager</module>
+		<module>cloud-me-app</module>
 	</modules>
 
 	<dependencyManagement>
@@ -76,33 +76,33 @@
 			</dependency>
 
 			<dependency>
-				<groupId>com.boot.i</groupId>
-				<artifactId>i-cloud-domain</artifactId>
-				<version>${i-cloud-domain.version}</version>
+				<groupId>com.cloud.me</groupId>
+				<artifactId>cloud-me-domain</artifactId>
+				<version>${cloud-me-domain.version}</version>
 			</dependency>
 
 			<dependency>
-				<groupId>com.boot.i</groupId>
-				<artifactId>i-cloud-api</artifactId>
-				<version>${i-cloud-api.version}</version>
+				<groupId>com.cloud.me</groupId>
+				<artifactId>cloud-me-api</artifactId>
+				<version>${cloud-me-api.version}</version>
 			</dependency>
 
 			<dependency>
-				<groupId>com.boot.i</groupId>
-				<artifactId>i-cloud-manager</artifactId>
-				<version>${i-cloud-manager.version}</version>
+				<groupId>com.cloud.me</groupId>
+				<artifactId>cloud-me-manager</artifactId>
+				<version>${cloud-me-manager.version}</version>
 			</dependency>
 
 			<dependency>
-				<groupId>com.boot.i</groupId>
-				<artifactId>i-cloud-infrastructure</artifactId>
-				<version>${i-cloud-infrastructure.version}</version>
+				<groupId>com.cloud.me</groupId>
+				<artifactId>cloud-me-infrastructure</artifactId>
+				<version>${cloud-me-infrastructure.version}</version>
 			</dependency>
 
 			<dependency>
-				<groupId>com.boot.i</groupId>
-				<artifactId>i-cloud-facade</artifactId>
-				<version>${i-cloud-facade.version}</version>
+				<groupId>com.cloud.me</groupId>
+				<artifactId>cloud-me-facade</artifactId>
+				<version>${cloud-me-facade.version}</version>
 			</dependency>
 
 			<dependency>

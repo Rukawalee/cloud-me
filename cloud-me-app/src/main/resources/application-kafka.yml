@@ -1,0 +1,8 @@
+# https://kafka.apache.org/
+spring:
+  kafka:
+    consumer:
+      enable-auto-commit: true
+      group-id: kafka_cloud-me
+    bootstrap-servers:
+      - ${kafka.address}
