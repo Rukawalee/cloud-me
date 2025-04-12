@@ -1,4 +1,4 @@
-package com.cloud.me.icloud;
+package com.cloud.me;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
