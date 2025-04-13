@@ -1,6 +1,6 @@
 <p>&nbsp;</p>
 <div align="center">
-	<img alt="logo" src="./sources/imgs/cloud-me.png" width="200">
+	<img alt="logo" src="https://cdn.jsdelivr.net/gh/Rukawalee/cloud-images@master/images/cloud-me.png" width="200">
 </div>
 <h4 align="center">基于 SpringBoot 3 / SpringCloud & Alibaba 集成的微服务架构体系</h4>
 
