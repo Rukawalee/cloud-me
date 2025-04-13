@@ -3,6 +3,6 @@ spring:
   kafka:
     consumer:
       enable-auto-commit: true
-      group-id: kafka_cloud-me
+      group-id: kafka-${spring.application.name}
     bootstrap-servers:
       - ${kafka.address}

@@ -30,19 +30,23 @@
 	<properties>
 		<java.version>17</java.version>
 		<dubbo.version>3.3.4</dubbo.version>
+		<dubbo.adapter.version>1.8.8</dubbo.adapter.version>
 		<spring-cloud-alibaba.version>2023.0.3.2</spring-cloud-alibaba.version>
-		<cloud-me.version>0.0.1-SNAPSHOT</cloud-me.version>
-		<cloud-me-domain.version>0.0.1-SNAPSHOT</cloud-me-domain.version>
-		<cloud-me-api.version>0.0.1-SNAPSHOT</cloud-me-api.version>
-		<cloud-me-manager.version>0.0.1-SNAPSHOT</cloud-me-manager.version>
-		<cloud-me-infrastructure.version>0.0.1-SNAPSHOT</cloud-me-infrastructure.version>
-		<cloud-me-facade.version>0.0.1-SNAPSHOT</cloud-me-facade.version>
 		<mysql.version>9.2.0</mysql.version>
 		<mybatis.version>3.0.4</mybatis.version>
 		<druid.version>1.2.24</druid.version>
 		<powerjob.version>5.1.1</powerjob.version>
 		<rocketmq.version>2.3.3</rocketmq.version>
 		<skywalking.version>9.4.0</skywalking.version>
+		<minio.version>8.5.17</minio.version>
+
+		<!-- DDD 模块 -->
+		<cloud-me.version>0.0.1-SNAPSHOT</cloud-me.version>
+		<cloud-me-domain.version>0.0.1-SNAPSHOT</cloud-me-domain.version>
+		<cloud-me-api.version>0.0.1-SNAPSHOT</cloud-me-api.version>
+		<cloud-me-manager.version>0.0.1-SNAPSHOT</cloud-me-manager.version>
+		<cloud-me-infrastructure.version>0.0.1-SNAPSHOT</cloud-me-infrastructure.version>
+		<cloud-me-facade.version>0.0.1-SNAPSHOT</cloud-me-facade.version>
 	</properties>
 
 	<modules>
@@ -64,6 +68,7 @@
 				<scope>import</scope>
 			</dependency>
 
+			<!-- dubbo -->
 			<dependency>
 				<groupId>org.apache.dubbo</groupId>
 				<artifactId>dubbo-spring-boot-starter</artifactId>
@@ -74,81 +79,86 @@
 				<artifactId>dubbo-nacos-spring-boot-starter</artifactId>
 				<version>${dubbo.version}</version>
 			</dependency>
-
 			<dependency>
-				<groupId>com.cloud.me</groupId>
-				<artifactId>cloud-me-domain</artifactId>
-				<version>${cloud-me-domain.version}</version>
+				<groupId>com.alibaba.csp</groupId>
+				<artifactId>sentinel-apache-dubbo-adapter</artifactId>
+				<version>${dubbo.adapter.version}</version>
 			</dependency>
 
-			<dependency>
-				<groupId>com.cloud.me</groupId>
-				<artifactId>cloud-me-api</artifactId>
-				<version>${cloud-me-api.version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>com.cloud.me</groupId>
-				<artifactId>cloud-me-manager</artifactId>
-				<version>${cloud-me-manager.version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>com.cloud.me</groupId>
-				<artifactId>cloud-me-infrastructure</artifactId>
-				<version>${cloud-me-infrastructure.version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>com.cloud.me</groupId>
-				<artifactId>cloud-me-facade</artifactId>
-				<version>${cloud-me-facade.version}</version>
-			</dependency>
-
+			<!-- 数据驱动 -->
 			<dependency>
 				<groupId>com.mysql</groupId>
 				<artifactId>mysql-connector-j</artifactId>
 				<version>${mysql.version}</version>
 			</dependency>
 
+			<!-- ORM -->
 			<dependency>
 				<groupId>org.mybatis.spring.boot</groupId>
 				<artifactId>mybatis-spring-boot-starter</artifactId>
 				<version>${mybatis.version}</version>
 			</dependency>
 
-			<dependency>
-				<groupId>com.alibaba</groupId>
-				<artifactId>druid-spring-boot-starter</artifactId>
-				<version>${druid.version}</version>
-			</dependency>
-
+			<!-- 定时任务 -->
 			<dependency>
 				<groupId>tech.powerjob</groupId>
 				<artifactId>powerjob-worker-spring-boot-starter</artifactId>
 				<version>${powerjob.version}</version>
 			</dependency>
 
+			<!-- 消息队列 -->
 			<dependency>
 				<groupId>org.apache.rocketmq</groupId>
 				<artifactId>rocketmq-spring-boot-starter</artifactId>
 				<version>${rocketmq.version}</version>
 			</dependency>
 
+			<!-- skywalking trace 追踪 -->
 			<dependency>
 				<groupId>org.apache.skywalking</groupId>
 				<artifactId>apm-toolkit-logback-1.x</artifactId>
 				<version>${skywalking.version}</version>
-				<exclusions>
-					<exclusion>
-						<groupId>net.bytebuddy</groupId>
-						<artifactId>byte-buddy</artifactId>
-					</exclusion>
-					<exclusion>
-						<groupId>ch.qos.logback</groupId>
-						<artifactId>logback-classic</artifactId>
-					</exclusion>
-				</exclusions>
+			</dependency>
+
+			<dependency>
+				<groupId>io.minio</groupId>
+				<artifactId>minio</artifactId>
+				<version>${minio.version}</version>
+			</dependency>
+
+			<!-- 域 -->
+			<dependency>
+				<groupId>com.cloud.me</groupId>
+				<artifactId>cloud-me-domain</artifactId>
+				<version>${cloud-me-domain.version}</version>
+			</dependency>
+
+			<!-- rpc api -->
+			<dependency>
+				<groupId>com.cloud.me</groupId>
+				<artifactId>cloud-me-api</artifactId>
+				<version>${cloud-me-api.version}</version>
+			</dependency>
+
+			<!-- 业务实现 -->
+			<dependency>
+				<groupId>com.cloud.me</groupId>
+				<artifactId>cloud-me-manager</artifactId>
+				<version>${cloud-me-manager.version}</version>
+			</dependency>
+
+			<!-- 基础设施 -->
+			<dependency>
+				<groupId>com.cloud.me</groupId>
+				<artifactId>cloud-me-infrastructure</artifactId>
+				<version>${cloud-me-infrastructure.version}</version>
+			</dependency>
+
+			<!-- 业务防腐 -->
+			<dependency>
+				<groupId>com.cloud.me</groupId>
+				<artifactId>cloud-me-facade</artifactId>
+				<version>${cloud-me-facade.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>

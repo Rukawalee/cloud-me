@@ -1,0 +1,6 @@
+# https://www.minio.org.cn/docs/minio/kubernetes/upstream/
+minio:
+  endpoint: ${minio.address}
+  access-key: ${minio.ak}
+  secret-key: ${minio.sk}
+  bucket-name: bucket-${spring.application.name}

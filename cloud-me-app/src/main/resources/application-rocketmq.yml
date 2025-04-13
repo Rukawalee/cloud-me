@@ -2,6 +2,6 @@
 rocketmq:
   name-server: ${rocketmq.address}
   producer:
-    group: ${spring.application.name}-producer
+    group: producer-${spring.application.name}
   consumer:
-    group: ${spring.application.name}-consumer
+    group: consumer-${spring.application.name}

@@ -13,7 +13,7 @@ nacos:
 mysql:
   username: cloud-me
   password: cloud-me
-  url: jdbc:mysql://192.168.145.135:3306/cloud-me
+  url: jdbc:mysql://192.168.145.135:3306
 
 # dubbo config
 dubbo:
@@ -50,3 +50,9 @@ es:
   address: http://192.168.145.135:9200
   username: elastic
   password: Elastic_NHDxN6
+
+# minio
+minio:
+  address: http://192.168.145.135:9001
+  ak: lo1sGM8oSbiWYwJQgtiZ
+  sk: JyTLxxURP7D6Ike22otHGxEQMDNQsu6sQwmMAJw1
