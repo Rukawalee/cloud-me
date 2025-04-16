@@ -1,7 +1,7 @@
 # app 基础启动参数
 # nacos config
 nacos:
-  address: 192.168.145.135:8848
+  address: 192.168.248.128:8848
   username: nacos
   password: nacos
   config:
