@@ -17,6 +17,5 @@
 
 ## 架构
 
-```mermaid
-```
+![cloud-me 架构](https://gh-proxy.com/github.com/Rukawalee/draw.io/blob/master/cloud-me/cloud-me-architecture.drawio.png)
 
