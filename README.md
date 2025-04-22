@@ -17,5 +17,4 @@
 
 ## 架构
 
-![cloud-me 架构](https://gh-proxy.com/github.com/Rukawalee/draw.io/blob/master/cloud-me/cloud-me-architecture.drawio.png)
-
+![cloud-me 架构](https://cdn.jsdelivr.net/gh/Rukawalee/draw.io@master/cloud-me/cloud-me-architecture.drawio.svg)
