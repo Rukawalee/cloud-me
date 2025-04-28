@@ -9,7 +9,7 @@
 > [!Note]
 >
 > Java 开发已有些年头，感受时间变迁，时代进步，科技创新。回头看，这几年沉淀欠缺，要丰富过去的凝练总结。我想基于 Spring
-> 落地一个后端脚手架，归纳过去开发经验沉淀而成的分布式微服务架构体系。
+> 落地一个后端脚手架，归纳过去开发经验沉淀而成的分布式微服务架构体系--蜜云。
 
 #### 目标
 
@@ -22,7 +22,6 @@
 #### 特性
 
 * 依赖 [Nacos](https://nacos.io/) 动态配置管理、服务发现管理。
-
 * 依赖 [Dubbo](https://cn.dubbo.apache.org/zh-cn/overview/what/) 解决微服务架构下的服务治理与通信。
 * 依赖 [Seata](https://seata.apache.org/zh-cn/) 提供高性能和简单易用的分布式事务服务。
 * 依赖 [Kafka](https://kafka.apache.org/) 高吞吐消息队列。
